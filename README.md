@@ -1,4 +1,4 @@
-Yii2 ActiveForm Widget
+Yii2 ActiveForm
 ===================
 
 
@@ -13,13 +13,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-php composer.phar require --prefer-dist "c006/yii2-widget-activeform" "dev-master"
+php composer.phar require --prefer-dist "c006/yii2-activeform" "dev-master"
 ```
 
 or add
 
 ```
-"c006/yii2-submit-spinner": "dev-master"
+"c006/c006/yii2-activeform": "dev-master"
 ```
 
 to the require section of your `composer.json` file.
