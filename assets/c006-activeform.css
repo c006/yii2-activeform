@@ -1,0 +1,62 @@
+
+.form-group {
+    display : block;
+    }
+.c006-activeform-toggle-container {
+    display               : inline-block;
+    min-height            : 34px;
+    cursor                : pointer;
+    -webkit-border-radius : 4px;
+    -moz-border-radius    : 4px;
+    border-radius         : 4px;
+    }
+.c006-activeform-toggle-container:hover {
+    -webkit-box-shadow : 0px 0px 5px 0px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow    : 0px 0px 5px 0px rgba(50, 50, 50, 0.75);
+    box-shadow         : 0px 0px 5px 0px rgba(50, 50, 50, 0.75);
+    }
+.c006-activeform-toggle-container > span {
+    display    : inline-block;
+    position   : relative;
+    float      : left;
+    margin     : 0;
+    min-height : 34px;
+    min-width  : 40px;
+    font-size  : 1.1em;
+    }
+.c006-activeform-toggle-container > span > span {
+    position     : absolute;
+    top          : 50%;
+    left         : 50%;
+    margin-right : -50%;
+    transform    : translate(-50%, -50%)
+    }
+.c006-activeform-toggle-on {
+    -moz-border-radius-topleft        : 4px;
+    -webkit-border-top-left-radius    : 4px;
+    border-top-left-radius            : 4px;
+    -moz-border-radius-bottomleft     : 4px;
+    -webkit-border-bottom-left-radius : 4px;
+    border-bottom-left-radius         : 4px
+    }
+.c006-activeform-toggle-off {
+    -moz-border-radius-topright        : 4px;
+    -webkit-border-top-right-radius    : 4px;
+    border-top-right-radius            : 4px;
+    -moz-border-radius-bottomright     : 4px;
+    -webkit-border-bottom-right-radius : 4px;
+    border-bottom-right-radius         : 4px;
+    }
+.c006-activeform-on {
+    padding          : 2px 10px 2px 8px;
+    background-color : #5CB85C;
+    color            : #FFFFFF;
+    }
+.c006-activeform-off {
+    padding          : 2px 10px 2px 8px;
+    background-color : #878787;
+    color            : #FFFFFF;
+    }
+.c006-block {
+    display : block !important;
+    }
