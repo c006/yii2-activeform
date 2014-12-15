@@ -2,7 +2,7 @@ Yii2 ActiveForm
 ===================
 
 
-`Alpha Mode, not usable yet`
+Current this adds a custom field and extends ActiveFrom / ActiveField.
 
 
 Installation
@@ -31,24 +31,14 @@ Required
 + ***jQuery***
 
 
-
-
-
-
-
-Options
--------
-
-
-
-
 Usage
 -----
 
+An alternative to a checkbox. Column type BIT(1)
 
+`<?= $form->field($model, 'table_column_bit')->toggle() ?>`
 
-Errors
----------
+![alt text](http://github.c006.us/yii2-activeform/toggle.jpg?)
 
 
 
