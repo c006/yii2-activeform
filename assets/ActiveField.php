@@ -7,7 +7,9 @@
  */
 namespace c006\activeForm\assets;
 
+use yii\helpers\BaseHtml;
 use yii\helpers\Html;
+use yii\widgets\ActiveField as ActiveFieldBase;
 
 class ActiveField extends \yii\widgets\ActiveField
 {
@@ -46,7 +48,7 @@ class ActiveField extends \yii\widgets\ActiveField
         if ($enclosedByLabel) {
             $this->labelOptions     = ['class' => 'c006-block'];
             $this->parts['{input}'] = '
-<div class="c006-activeform-toggle-container" >
+<div class="c006-activeform-toggle-container ' . BaseHtml::getInputId($this->model, $this->attribute) . '" >
     <span class="c006-activeform-toggle-on c006-activeform-on" ><span>ON</span></span>
     <span class="c006-activeform-toggle-off c006-activeform-off"><span>OFF</span></span>
     ' . Html::activeHiddenInput($this->model, $this->attribute, $this->inputOptions) . '
@@ -56,16 +58,40 @@ class ActiveField extends \yii\widgets\ActiveField
             unset($options['labelOptions']);
             $options['label']       = NULL;
             $this->parts['{input}'] = '
-<div class="c006-activeform-toggle-container" style="margin-left: 20px" >
+<div class="c006-activeform-toggle-container ' . BaseHtml::getInputId($this->model, $this->attribute) . '" " >
+<div class="table">
     <span class="c006-activeform-toggle-on c006-activeform-on" ><span>ON</span></span>
     <span class="c006-activeform-toggle-off c006-activeform-off"><span>OFF</span></span>
     ' . Html::activeHiddenInput($this->model, $this->attribute, $this->inputOptions) . '
+</div>
 </div>
 ';
         }
         $this->adjustLabelFor($options);
 
         return $this;
+
+    }
+
+
+    /**
+     * Hides the element including label
+     *
+     * @param array $options
+     *
+     * @return $this
+     */
+    public function hide($options = [])
+    {
+        if (isset($this->options['class'])) {
+            $this->options['class'] .= ' hide';
+        } else {
+            $this->options['class'] = 'hide';
+        }
+        $this->options += $options;
+
+        return ActiveFieldBase::hiddenInput($this->options);
+
 
     }
 

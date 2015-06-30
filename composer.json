@@ -1,18 +1,24 @@
 {
-    "name"       : "c006/yii2-activeform",
-    "description": "Nicer ActiveFields",
-    "type"       : "yii2-extension",
-    "keywords"   : ["yii2", "extension", "widgets", "activeform", "activefields"],
-    "license"    : "MIT",
-    "authors"    : [
-        {
-            "name" : "Jon Chambers",
-            "email": "jchambers.dev@gmail.com"
-        }
-    ],
-    "autoload"   : {
-        "psr-4": {
-            "c006\\activeForm\\": ""
-        }
+  "name": "c006/yii2-activeform",
+  "description": "Nicer ActiveFields",
+  "type": "yii2-extension",
+  "keywords": [
+    "yii2",
+    "extension",
+    "widgets",
+    "activeform",
+    "activefields"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Jon Chambers",
+      "email": "jchambers.dev@gmail.com"
     }
+  ],
+  "autoload": {
+    "psr-4": {
+      "c006\\activeForm\\": ""
+    }
+  }
 }

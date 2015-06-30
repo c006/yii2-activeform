@@ -4,17 +4,15 @@
 
 
 jQuery(function () {
-
     jQuery('.c006-activeform-toggle-container')
-        //.unbind('click')
+        .unbind('click')
         .bind('click',
               function () {
-                  var _transistion = 700;
+                  var _transistion = 400;
                   var $this = jQuery(this);
-                  var $on = $this.find('.c006-activeform-toggle-on');
-                  var $off = $this.find('.c006-activeform-toggle-off');
-                  var $input = $this.find('input[type=hidden]');
-
+                  var $on = jQuery($this.find('.c006-activeform-toggle-on'));
+                  var $off = jQuery($this.find('.c006-activeform-toggle-off'));
+                  var $input = jQuery($this.find('input[type=hidden]'));
                   if (!$input.attr('item_init') || $input.val() == undefined || $input.val() == "") {
                       if ($input.val()) {
                           $input.val(0)
@@ -35,5 +33,4 @@ jQuery(function () {
                   }
               })
         .trigger('click');
-
 });
