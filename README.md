@@ -2,9 +2,6 @@ Yii2 ActiveForm
 ===================
 
 
-`Alpha Mode, not usable yet`
-
-
 Installation
 ------------
 
@@ -12,15 +9,11 @@ The preferred way to install this extension is through [composer](http://getcomp
 
 Either run
 
-```
-php composer.phar require --prefer-dist "c006/yii2-activeform" "dev-master"
-```
+`php composer.phar require --prefer-dist "c006/yii2-activeform" "dev-master"`
 
 or add
 
-```
-"c006/c006/yii2-activeform": "dev-master"
-```
+`"c006/c006/yii2-activeform": "dev-master"`
 
 to the require section of your `composer.json` file.
 
@@ -28,8 +21,7 @@ to the require section of your `composer.json` file.
 Required
 --------
 
-+ ***jQuery***
-
++ ***jQuery-ui***
 
 
 
@@ -39,16 +31,11 @@ Required
 Options
 -------
 
++ **Toggle Switch**  `<?= $form->field($model, 'active')->toggle() ?>`
 
 
++ **Hidden Field**  `<?= $form->field($model, 'hidden_data')->hide() ?>`   (Will not show label)
 
-Usage
------
-
-
-
-Errors
----------
 
 
 
