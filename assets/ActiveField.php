@@ -11,10 +11,20 @@ use yii\helpers\BaseHtml;
 use yii\helpers\Html;
 use yii\widgets\ActiveField as ActiveFieldBase;
 
+/**
+ * Class ActiveField
+ * @package c006\activeForm\assets
+ */
 class ActiveField extends \yii\widgets\ActiveField
 {
 
 
+    /**
+     * @param array $options
+     * @param bool|TRUE $enclosedByLabel
+     *
+     * @return $this
+     */
     public function checkbox($options = [], $enclosedByLabel = TRUE)
     {
         if ($enclosedByLabel) {
@@ -28,7 +38,7 @@ class ActiveField extends \yii\widgets\ActiveField
                 }
             }
             unset($options['labelOptions']);
-            $options['label']       = NULL;
+            $options['label'] = NULL;
             $this->parts['{input}'] = Html::activeCheckbox($this->model, $this->attribute, $options);
         }
         $this->adjustLabelFor($options);
@@ -37,7 +47,15 @@ class ActiveField extends \yii\widgets\ActiveField
     }
 
 
-    public function toggle($options = [], $enclosedByLabel = TRUE)
+    /**
+     * @param array $options
+     * @param bool|TRUE $enclosedByLabel
+     * @param string $on_label
+     * @param string $off_label
+     *
+     * @return $this
+     */
+    public function toggle($options = [], $enclosedByLabel = TRUE, $on_label = 'ON', $off_label = 'OFF')
     {
         if (isset($options['label']) && !isset($this->parts['{label}'])) {
             $this->parts['{label}'] = $options['label'];
@@ -46,17 +64,17 @@ class ActiveField extends \yii\widgets\ActiveField
             }
         }
         if ($enclosedByLabel) {
-            $this->labelOptions     = ['class' => 'c006-block'];
+            $this->labelOptions = ['class' => 'c006-block'];
             $this->parts['{input}'] = '
 <div class="c006-activeform-toggle-container ' . BaseHtml::getInputId($this->model, $this->attribute) . '" >
-    <span class="c006-activeform-toggle-on c006-activeform-on" ><span>ON</span></span>
-    <span class="c006-activeform-toggle-off c006-activeform-off"><span>OFF</span></span>
+    <span class="c006-activeform-toggle-on c006-activeform-on" ><span>' . $on_label . '</span></span>
+    <span class="c006-activeform-toggle-off c006-activeform-off"><span>' . $off_label . '</span></span>
     ' . Html::activeHiddenInput($this->model, $this->attribute, $this->inputOptions) . '
 </div>
 ';
         } else {
             unset($options['labelOptions']);
-            $options['label']       = NULL;
+            $options['label'] = NULL;
             $this->parts['{input}'] = '
 <div class="c006-activeform-toggle-container ' . BaseHtml::getInputId($this->model, $this->attribute) . '" " >
 <div class="table">
