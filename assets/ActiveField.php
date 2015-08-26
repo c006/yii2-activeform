@@ -7,6 +7,7 @@
  */
 namespace c006\activeForm\assets;
 
+use yii\helpers\ArrayHelper;
 use yii\helpers\BaseHtml;
 use yii\helpers\Html;
 use yii\widgets\ActiveField as ActiveFieldBase;

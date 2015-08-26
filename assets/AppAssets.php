@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: user
- * Date: 5/24/14
- * Time: 11:47 AM
- */
 namespace c006\activeForm\assets;
 
 use yii\web\AssetBundle;
