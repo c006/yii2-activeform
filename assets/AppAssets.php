@@ -29,17 +29,13 @@ class AppAssets extends AssetBundle
      */
     public $js = [
         'c006-activeform.js',
-        'jquery-ui.js'
     ];
 
     /**
      * @inheritdoc
      */
     public $depends = [
-        'yii\web\YiiAsset',
         'yii\widgets\ActiveFormAsset',
-        'yii\bootstrap\BootstrapAsset',
-        'yii\web\JqueryAsset',
     ];
 
     /**
